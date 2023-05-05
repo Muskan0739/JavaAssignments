@@ -1,0 +1,56 @@
+Q1. What is Git ?
+Answer. Git is a popular version control system (VCS) , it was created by Linus Torvalds in 2005 and has been maintained by Junio Hamano.
+
+Git is used for - 
+•	Tracking code changes
+•	Tracking who made changes like history of the files 
+•	Coding collaboration
+
+Q2. What do you understand by the term ‘Version Control System ‘?
+Answer. It is a system that records changes to a file or set of files over time , so that we can recall specific versions later , i.e. for every source code changes in a file a new version will be created .
+There are 3 types of VCS -
+•	Local version control system
+•	Centralised version control system
+•	Distributed version control system
+
+Q3.  What is Github ?
+Answer. Github is an internet hosting service for software development and version control systems using Git . It provides the distributed version control system of git .
+It is commonly used to host open source software development projects .
+
+Q4. Mention some popular git hosting services ?
+Answer. Some popular git hosting services are :-
+      Bitbucket
+      Github
+      Gitlab
+      Perforce
+      Beanstalk
+      Amazon AWS CodeCommit
+      Microsoft Azure DevOps
+
+Q5. Different types of version control system ?
+Answer. There are three types of version control system -
+1.	Local version control system
+2.	Centralised version control system
+3.	Distributed version control system
+1. Local version control system :- It is used to maintain the file version and retrieve the files based on specific versions.
+2. Centralised version control system :- It is a version control system where developers can collaborate and do the changes.
+3. Distributed version control system :- A distributed version control system (DVCS) brings a local copy of the complete repository to every team member’s computer , so they can commit , branch , a merge locally . The server doesn’t have to store a physical file for each branch - it just needs the differences between each commit .
+
+Q6. What benefits come with using git?
+Answer.
+1. Performance : Git performs very strongly and reliably when compared to other version control systems . New code changes can be easily committed , version branches can be effortlessly compared and merged , and code can also be optimized to perform better.
+
+ 2. Security : Git is designed specially to maintain the integrity of source code . File contents as well as the relationship between file directories , tags , commits ,version etc. are secured cryptographically using an algorithm called SHA1 which protects the code and change history against accidental as well as malicious damage.
+
+3.Flexibility : A key design objective of git is the kind of flexibility it offers to support several kinds of nonlinear development workflow and its efficiency in handling both small scale and large scale projects as well as protocols.
+
+4.Distributed Development : Since Git is a distributed VCS it offers a local repository to each developer with its own history of commits. Therefore, you don’t require a network connection to create commits , inspect previous file versions , or check differences between two or more commits.
+
+5. Community : Git is very popular , widely used , and accepted as a standard version control system by the vast majority within the developer’s community . It’s much easier to leverage 3rd - party libraries and encourage other developers to fork your open source code using git.
+
+Q7.What is a git repository ?
+Answer. A git repository is the .git/folder inside a project . This repository tracks all changes made to files in your project , building a history over time . 
+
+Q8. How can you initialize a repository in git ?
+Answer. To create a new repo, you'll use the git init command. git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new .git subdirectory in your current working directory. This will also create a new main branch.
+

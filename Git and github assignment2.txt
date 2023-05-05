@@ -1,0 +1,47 @@
+Q1. How to check if git is available on your system ?
+Answer . To check if git is available in your use this command 
+     git version or git --version
+
+Q2. How to initialize a new git repository?
+Answer. To create a new repo, you'll use the git init command. git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new .git subdirectory in your current working directory. This will also create a new main branch. 
+
+Q3. How to tell git about your name and email?
+Answer. If git software is used for the first time we use 
+             Git config
+The command will set the developer identity like nameM ,email id .This configuration information will be used by git software for every push operation encountered .
+> git config: --list // this command is used to provide the list of configuration.
+
+ To set the username and email 
+> git config --global user.name "Muskan"
+> git config --global user.email  "javamuskan2022@gmailcom".
+
+Q4.How to add a file to staging area ?
+Answer. To send the code from workspace to stage area we use the following command
+                syntax : git add <file-name>
+If we want to push all the files from workspace to stage area,we use the following command.
+      syntax: git add .
+                  git add --a
+
+Q5.How to remove  a file from staging area ?
+Answer.  To un stage the files from staged area to workspace,using the following command
+               syntax: git rm --cached <file-name>
+
+Q6. How to make a commit?
+Answer. The files which are ready for commit should be in stage area, to perform commit operation we use the following command
+               syntax: git commit -m <some-messages>
+eg1. git commit -m "first commit" //This file commit all the files present in stage area
+eg2. git commit -m "second commit" filename //This will commit only that file into local repository.
+
+Q7. How to send your changes to a remote repository?
+Answer. If you made any changes to your code first add it to stage area by using
+                 git add .
+And to push it to remote repository we need to use following command
+     git branch - main
+     git remote add origin https://github.com/NitinTechnolog!/Workspace.git
+     git push -u origin main
+
+Q8.What is the difference between clone and pull?
+Answer. CLONE : It is used to clone the repository to the working directory of the developer.
+               Syntax : git clone
+PULL : It is used to fetch the latest changes made in the remote repository to the working directory.
+                syntax: git pull

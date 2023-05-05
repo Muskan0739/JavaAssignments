@@ -1,0 +1,63 @@
+Q1. What is statically typed and dynamically typed Programming Language?
+Answer. Statically typed : If the memory of the variable is given during the compilation time itself then such types of programming languages are called as “statically typed”.
+Eg : C, C++ , Java
+
+Dynamically typed : If the memory of the variable is given during the execution time itself then such types of programming languages are called “dynamically typed”.
+Ec: Python,PHP,JavaScript
+
+Q2.What is the variable in Java?
+Answer.A variable is the title of a reserved region allocated in memory. In other words, it may be referred to as the name of a memory location.It is a container that holds the value while the Java program is executed.
+
+Q3.How to assign a value to a variable?
+Answer. To assign a value to a variable first we need to declare it or we can directly do both declaration with assignment .
+Syntax for Declaring a Variable:
+Type variable_name [= value];
+The variable_name is the name of a variable. We can initialise the variable by Specifying an equal Sign and a value (initialization i.e. assigning an initial value, is optional). However, the compiler never assigns a default
+value to an uninitialized local variable in Java.
+ Eg : int a = 4;.
+
+Variables can be declared and assigned separately. Example,
+int rate;
+rate = 40;
+
+Q4.What are primitive data types in java?
+Answer. A primitive type is predefined by the language and is named by a reserved keyword.
+The primitive data types include boolean, char, byte, short, int, long, float 
+and double.
+
+ Q5. what is an identifier in java?
+Answer..An identifier is a name given to a package, class, interface, method, or variable. All identifiers must have different names.
+
+Q6. List the operators in java?
+Answer. Operators in Java can be classified into 6 types:
+1. Arithmetic Operators
+2. Relational Operators
+3. Logical Operators
+4. Assignment Operators
+5. Unary Operators
+6. Bitwise Operators
+
+Q7 .Explain about increment and decrement operators and give an example?
+Answer. Increment operator : this operator increases the numeric value by 1. There are two types of increment operator : 
+a.	Pre increment operator
+Eg : int a = 4;
+       int b =  ++a;
+       System.out.println(b);
+OUTPUT : 5
+b.	Post increment operator
+            Eg : int a =4 ;
+                    Int b = a++;
+                   System.out.prinltn(b);
+           OUTPUT : 5
+Decrement operator : This operator decreases the numeric value by 1 . There are two types of decrement operator in java .
+a.	Pre decrement operator 
+Eg int a = 5;
+    Int b = --a;
+   System.out.println(b);
+OUTPUT : 4
+b.	Post decrement operator
+ Eg : int a =4;
+         Int b = a–;
+        System.out.println(b);
+OUTPUT : 3
+
