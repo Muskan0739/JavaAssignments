@@ -1,3 +1,5 @@
+//WRITE A PROGRAM TO PRINT PW SKILLS USING PATTERN PROGRAMMING LOGIC
+
 public class PwSkills {
     public static void main(String args[]){
         int n = 8;

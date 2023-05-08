@@ -1,3 +1,5 @@
+//WRITE A PROGRAM TO PRINT TRIANGLE USING STAR PATTERN PROGRAMMING LOGIC
+
 import java.util.Scanner;
 
 public class Triangle {

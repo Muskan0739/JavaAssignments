@@ -1,3 +1,5 @@
+//WRITE A PROGRAM TO PRINT YOUR FULL NAME USING PATTERN PROGRAMING LOGIC
+
 public class Name {
     public static void main(String[] args) {
         int n = 8;

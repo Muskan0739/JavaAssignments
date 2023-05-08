@@ -1,3 +1,5 @@
+//WRITE A PROGRAM TO PRINT A PATTERN
+
 public class PatternProgram {
     public static void main(String args[]){
       int n =14;
