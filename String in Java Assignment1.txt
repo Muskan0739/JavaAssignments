@@ -1,0 +1,37 @@
+Q1. What is a string in java?
+Answer. String refers to an object in java present in package called java.lang.String.
+String refers to a collection of characters.
+
+
+Q2.Types of String in Java are?
+Answer.In java strings are classified into 2 types 
+1. Mutable String
+2. Immutable String
+Mutable String :- Once if we create a String, on that String if we try to perform any operation and if those changes get reflected in the same object then such strings are called “Mutable String”.
+Example: StringBuffer, StringBuilder
+Immutable String :- Once if we create a String, on that String if we try to perform any operation then those changes won’t be reflected in the same object, rather a new object will be created Such type of String is called as “Immutable String”.
+Example: String
+
+
+Q3. In how many ways can you create string objects in java?
+Answer. There are 2 ways to create string object : 
+By string literals : Java string literal is created by using double quotes.
+For example - String s = “Welcome”.
+
+By new keyword : Java string is created by using a keyword “new”.
+For example - String s = new string (“welcome”);
+It creates two object (in string pool and in heap) And one refrence variable where the variable ‘s’ will refer to object in heap.
+
+
+Q4.What is a string constant pool?
+Answer.The string constant pool is a special memory area. When we declare a string literal , the JVM creates the object in the pool and stores its refrence on the stack . before creating each string object in the memory , the JVM performs some steps to decrease the memory overhead.
+
+Q5.What do you mean by mutable and immutable objects?
+Answer.Mutable string :- if we create a String, on that String if we try to perform any operation and if those changes get reflected in the same object then such strings are called “Mutable string”.
+Immutable string :-if we create a String, on that String if we try to perform any operation then those changes won’t be reflected in the same oblect, rather a new oblect will be created Such type of String is called as “Immutable
+String”.
+
+
+
+Q6.Where exactly is the string constant pool located in the memory?
+Answer.String constant pool is located in the heap area in the memory. It stores the strings which are created by using string literals.

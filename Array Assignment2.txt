@@ -1,0 +1,89 @@
+Q1. What is the default value of array for different data types?
+Answer.For int datatype default value of array is 0.
+Example : int a[] = new int[3];
+    System.out.println(a[0]);//0
+    System.out.println(a[1]);//0
+    System.out.println(a[2]);//0
+
+
+For float datatype default value of array is 0.0
+Example : float a[] = new float[3];
+    System.out.println(a[0]);//0.0
+    System.out.println(a[1]);//0.0
+    System.out.println(a[2]);//0.0
+
+
+
+For byte datatype default value of array is 0
+Example : byte a[] = new byte[3];
+    System.out.println(a[0]);//0
+    System.out.println(a[1]);//0
+    System.out.println(a[2]);//0
+
+For char datatype default value of array is u0000
+Example : char a[] = new char[3];
+    System.out.println(a[0]);
+    System.out.println(a[1]);
+    System.out.println(a[2]);
+
+
+
+Q2. Can you pass the negative number in array size ?
+Answer. No, you cannot pass negative number in array size. If we declare an array with negative size it would result in a negative array size exception.
+ Example : int[] a = new int[-5];// NegativeArraySizeException
+
+Q3. Where does array stored in JVM memory?
+Answer.Since arrays are refrence types (we can create them using the new keyword ) these are stired in heap area.
+
+Q4. What are the disadvantages of array?
+Answer.Some disadvantages of array are : 
+Once we create the array, the size of array cannot be increased/decreased.
+It sores only homogeneous data elements
+Insertion and deletion becomes tedious
+There are chances of wastage of memory space if elements are lesser than the allocated size.
+We must know before hand how many elements will be there in array.
+
+Q5. What is an anonymous array in java ? Give an example?
+Answer.An array without a name is called Anonymous Array.This type of array is created just for instance use.
+Example public class Demo{
+public static void main(String... args){
+add(new int ̈]{10,20,30,40});
+add(new int ̈]{10,20});
+add(new int ̈]{});
+}
+public static void add(int ̈] a){
+sum+=0;
+for(int i=0;i<=a.length;i++){
+sum+=a ̈i];
+}
+System.out.println("The sum is ::"+sum);
+}
+}
+
+
+Q6. What are the different ways to traverse an array in java?
+Answer.You can traverse through an array using for loop or forEach loop.
+Using for loop - instead on printing element by element , you can iteratr the index using for loop starting 0 to length of the arraay .
+Using the for each loop - Since JDK1.5 Java intriduced a new for loop known as foreach loop or enhanced loop , which enables you to traverse the complete array sequentially without using an index variable. You can traverse through the array with less effort using this.
+
+Q7. What is the difference between length and length(0 method. Give an example?
+Answer.Length :- It is a property of array type class. This gives you the size of array.
+Example : class Hello{
+public static void main(String args[]){
+
+int arr[] = {1,2,3,4 };
+System.out.println(arr.length);
+
+}
+}
+Output : 4
+
+Length() :-It is a method of String class. This gives you the length of given string.
+Example : class Demo{
+public static void main(String arg[]){
+
+string name = “Muskan”;
+System.out.println(name.length());
+}
+{
+Output : 6

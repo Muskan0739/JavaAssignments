@@ -1,0 +1,73 @@
+Q1. What do you mean by an array?
+Answer. An array refers to index collection of fixed number of homogeneous data element .
+It’s a single variable holding multiple values which improve readability of the program.
+
+Q2.How to create an array?
+Answer.1. Single dimension array declaration :
+ int[] a//recommended to use as variable is separated from type
+ int a[]
+ int []a
+ int[6] a // compile time error. we cannot specife the size.
+Example : int[] a=new int[5];
+2. 2-D array declaration :
+2D-Array =1D-Array + 1D-Array
+                    (ref)            (data)
+int[][] a ;
+int a[][];
+int [][]a;
+int[] []a;
+int[] a[];
+int []a[];
+Example : int[][] a =new int[3][2];
+int[][] a= new int[3][];
+a[0]=new int[5];
+a[1]=new int[3];
+a[2]=new int[1];
+
+
+Q3. Can we change the size of array at run time ?
+Answer. The size of an array can not be changed after it is constructed.However you can change the element of array.
+
+Q4.Can you declare an array without assigning the size of array?
+Answer.No , at the time of array construction compulsarily we should specify the size of array. 
+Example : 
+      int[] a=new int[5];
+      int[] a =new int[];//ce:: array dimension is missing.
+
+Q5.What is the default value of an array ?
+Answer. Since arrays are treated as objects,internally based on the type of data we keep inside array JVM will keep default values.
+Example : 
+          int[] a =new int[5];
+          System.out.println(a[0]);//0
+
+Q6.What is a 1D array with an example?
+Answer.  A 1D array is the simplest form of an array in which the elements are stored linearly and can be accessed individually by specifying the index value of each element stored in the array. 
+Example : int[] a =new int[5];
+                  Int s[4] = {1,3,4,5};
+
+Q7. Write a program on 2D array?
+Answer. public class Demo {
+    public static void main(String args[]){
+
+        int numm[][] = new int[2][2];
+        numm[0][0] = 5;
+        numm[0][1] = 4;
+        numm[1][0] = 6;
+        numm[1][1] = 7;
+
+        int sum =0;
+       
+            for(int a[] : numm){
+                for(int b : a){
+
+                    sum = sum + b;
+
+                }
+   
+                System.out.println(sum);
+                System.out.println();
+                sum =0;
+            }
+        }      
+    }
+
