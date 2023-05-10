@@ -1,0 +1,86 @@
+Q1. Write a simple string program to take input from user .
+Answer . import java.util.Scanner;
+public class hello{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("PLEASE ENTER A STRING");
+    String s = sc.next();
+    System.out.println(s);
+    }
+  }
+
+Q2.How do you concatenate two string in java?Give an example?
+Answer.In java we can concatenate string in two ways 
+   1. By using “+” operator
+  Example : String str1 = "Hello";
+                   String str2 = "World";
+                   String str3 = str1 + " " + str2;
+                   System.out.println(str3); //Output: Hello World
+
+   2. By using concat() method
+   Example : String str1 = "Hello";
+                    String str2 = "World";
+                    String str3 = str1.concat(" ").concat(str2);
+                    System.out.println(str3); //Output: Hello World
+
+Q3. How do you find the length of a string in java explain with an example?
+Answer. To find the length of string in java we use length() method. Length(0 method returns the number of character present in string.
+Example : String s="INeuron";
+                 System.out.print(s.length());//7
+
+Q4.How do you compare two strings in java? Give an example?
+Answer. To comparD 2 Strings in java we use following approach
+a. == operator
+It compares the reference of the Object.
+
+b. equals()
+It compares the contents of two objects.
+
+Example : String s1 = new String("sachin");
+String s2 = new String("sachin");
+System.out.println(s1==s2); //false
+System.out.println(s1.equals(s2));//true
+
+
+
+Q5. Write a program to find the length of the string “refrigerator”.
+Answer.class string{
+    public static void main(String[] args) {
+        String name = "refrigerator";
+        System.out.println("The length of given string is " + name.length());
+    }
+}
+
+Output  The length of given string is 12
+
+
+Q6. Write a program to check if the letter ‘e’ is present in the word ‘Umbrella’.
+Answer.class string{
+    public static void main(String[] args) {
+        String name = "Umbrella";
+        char s;
+        for(int i = 0 ; i<name.length();i++){
+            s = name.charAt(i);
+            if(s == 'e'){
+                break;
+            }
+        }
+        System.out.println("character 'e' is present inside the string Umbrella");
+    }
+}
+Output : character ‘e’ is present inside the string Umbrella
+
+Q7. Write a program to delete all consonants from the string “Hello, have a good day”.
+Answer.class string{
+    public static void main(String[] args) {
+        String name = "Hello, have a good day";
+        char s;
+        for(int i = 0 ; i<name.length();i++){
+            s = name.charAt(i);
+            if(s == 'a' || s == 'e' || s == 'i' || s== 'o' || s== 'u'){
+                System.out.print(s + " ");
+            }
+        }
+    }
+}
+Output : e o a e a o o a 
