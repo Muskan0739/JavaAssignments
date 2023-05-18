@@ -1,0 +1,76 @@
+Q1.Why do we need static keyword in java explain with an example?
+Answer. Static keyword is mainly used for memory management in java. A static keyword can be applied to variables, methods, and classes. The static keyword is a property of a  class rather than an instance of a class. The static keyword is used for a consant variable or a method that is the same for every instance of a class.
+
+Example 
+class Demo{
+Static int age;
+Static String name;
+
+Static {
+age = 18;
+name = “Muskan”;
+System.out.prinltn( name + “ “ + age);
+}
+
+public static void main(String args[]){
+
+
+System.out.println(“Main method starts from here”);
+}
+}
+
+Output :
+Muskan 18
+Main method starts from here
+
+
+Q2. What is class loading and how does the java program actually executes?
+Answer. In java, classloading is the process of loading class files into the JVM(Java Virtual Machine) at runtime. It is responsible for loading classes from various sources, such as the file system, network, and databases, and making them available to the JVM for execution. 
+The class loading proccess in java is divided into three phases: loading, linking, and initialization.
+
+Loading: In the loading phase, the classloader locates the class file using the fully qualified class name, reads the class file, and converts it into a Class object. The Class object contains the metadata of the class, such as the fields, methods, and constructors.
+Linking: In the linking phase, the JVM performs several operations on the Class object, such as verifying the class file's integrity, resolving symbolic references, and allocating memory for the class variables.
+Initialozation: In the initialization phase, the JVM initializes the class variables with their default values, and runs the class's static initialization block (if any).
+
+
+Q3. Can we mark a local variable as static
+Answer. No, in java we cannot declare local variable as static. Because memory will be allocated to the static variable at the time of class loading, but for local variable and instance variable memory will be allocated at the time of object creation.
+
+Q4. Why is the static block executed before the main method in java?
+Answer.The static blocks always execute first before the main() method in java because the compiler stores them in memory at the time of class loading and before the object creation.
+
+Q5. Why is a static method also called a class method ?
+Answer. A static method is a method that belongs to a .class rather than an instance of a class. This means you can call a static method without creating an object of the class. Static methods are sometimes called class method.
+
+Q6. What is the use of static block in java?
+Answer.These are the blocks which gets executed automatically at the loading the .class file. If we want to perform any activity at the time of loading a .class file we have to define that activity inside the static block. We can write any no of static blocks, those static blocks will be executed from top to bottom. Normally a static block is used to perform initialization of the static variables.
+
+
+Q7. Difference between static and instance variables
+Answer.Instance variable - 
+1. Instance variables are declared in a class, but outside a method, constructor or any block.
+2. Instance variables are created when an object is created with the use of the keyword 'new' and destroyed when the object is destroyed.
+3. Instance variables can be accessed directly by calling the variable name inside the class. However, within static methods (when instance variables are given accessibility), they should be called using the fully qualified name. ObjectReference.VariableName.
+
+Static variable - 
+1. Class variables also known as static variables are declared with the static keyword in a class, but outside a method, constructor or a block.
+2. Static variables are created when the program starts and destroyed when the program stops.
+3. Static variables can be accessed by calling with the class name ClassName.VariableName.
+
+
+Q8. Difference between static and non static members
+Answer. Static members 
+ 1. These variables are called “class variables”.
+ 2. These variables will get memory in the method area.
+ 3. If the value does not change from object to object then we need to use static variables.
+ 4. Inside a static area we can access static variables only.
+ 5. Static variables are created using static keywords.
+
+ Non-static member
+
+1. These variables are called “instance variables”.
+2. These variables will get memory in the heap area.
+3. If the value changes from object to object then we need to use “non-static” variables.
+4. Inside a nonstatic area we can access both static and non-static variables
+5. Non-static variables are created without using the “static” keyword.
+

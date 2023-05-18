@@ -1,4 +1,4 @@
-class string{
+class Pallandrome{
     public static void main(String[] args) {
         String name = "2552";
         String s = "";

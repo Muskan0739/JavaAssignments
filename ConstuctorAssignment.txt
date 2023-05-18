@@ -1,0 +1,37 @@
+Q1. What is a constructor?
+Answer. Constructor is used to create the instance of  the class. Constructors are almost similar to methods except for two things - its name is same as the class name and it has no return type. Sometimes constructors are also referred to as special methods to initialise an object. 
+
+Q2. What is constructor chaining?
+Answer. A class can more than one constructor and all these constructors have the same name they differ only in the type of argument, hence constructor chaining is the process of calling a sequence of constructors. 
+
+Q3. Can we call a subclass constructor from a superclass constructor?
+Answer.yes, we can call subclass constructor from a superclass constructor 
+
+Q4. What happens if you keep a return type for a constructors?
+Answer. If we add a return type to a constructor, then it will become a method of the class. This is the way java runtime distinguish between a normal method and a constructor.
+
+Q5. What is a no-arg constructor?
+Answer.A no-argument constructor is a default constructor and if you don't define explicitly in your program, then java compiler will create a default constructor with no-argument.
+
+Q6. How is a No-argument constructor different from the default constructor?
+Answer.When a programmer creates a constructor explicitly in a program with no argument then it is called as no-argument constructor whereas if no constructor is defined explicitly in a program then java compiler creates a default constructor.
+
+Q7. When do we need constructor overloading?
+Answer. If we want to provide different ways to initialize an object of a class then we use constructor overloading.
+
+Q8. What is default constructor explain with an example.
+Answer. A default constructor is a constructor created by the compiler if we do not define any constructor for a class.
+Example
+public class Student{
+String name;
+Int age;
+
+public static void main(String args[]){
+Student st = new Student();
+
+st.name = “Muskan”;
+st.age = 18;
+System.out.println(st.name);//Muskan
+System.out.println(st.age);//18
+}
+}
