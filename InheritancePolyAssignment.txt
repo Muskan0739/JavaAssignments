@@ -1,0 +1,123 @@
+Q1. What is inheritance in java?
+Answer. Inheriting the properties and behaviour from one class(parent class) by another class(child class) is known as inheritance in java. It is one the pillars of Object orientation.It always speaks about reusability.
+
+Q2. What is superclass and subclass?
+Answer. The class from which another class(Child class) inherits the properties and behaviour is known as Superclass/Parent class/Base class. 
+The class which inherits the properties and behaviour from another class(parent class) is known as subclass/Child class/ Derived class.
+
+Q3. How is inheritance implemented/achieved in java?
+Answer. In java inheritance is achieved through the “extends” keyword. If we use extends keyword, then we can take the properties and behaviours from parents class to child class.
+
+Q4. What is polymorphism?
+Answer. If one thing exists in more than one form then it is called polymorphism. Polymorphism is a Greek word, where poly means many and morphism means structures or forms.
+
+Q5. Differentiate between method overloading and overriding.
+Answer. Method overloading:- The process of extending the existing method functionality with new functionality is called method overloading. In case of method overloading, different method signatures must be provided to the method.
+
+Method Overriding:- The process of replacing existing method functionality with some new functionality is called method overriding. If we want to override superclass method with subclass method then both superclass and subclass method must have the same method prototype.
+
+Q6. What is an abstraction explain with an example?
+Answer. Abstraction is a process of hiding the implementation details and showing only functionality to the user. 
+
+Example:  
+abstract class DB_Driver{
+       public abstract void getDriver();
+}
+class New_DB_Driver extends DB_Driver{
+     public void getDriver(){
+             System.out.println("Type-4 Driver");
+     }
+} 
+public class Test{
+      public static void main(String args[]){
+                     DB_Driver driver=new New_DB_Driver();
+                     driver.getDriver();
+      }
+}
+
+
+
+Q7. What is the difference between an abstract method and final method in java?Explain with an example
+Answer. The abstract method is incomplete while the final method is complete. The only way to use an abstract method is by overriding, but you cannot override a final method in java.
+
+Example 
+abstract class A{
+ abstract void m1();
+abstract void m2();
+}
+
+Class B extends A{
+ Void m1(){
+   System.out.println(“hello”);
+}
+void m2(){
+    System.out.println(“m2 in class B”);
+}
+}
+
+final class C{
+  
+
+
+Q8. What is the final class in java?
+Answer. The final class in java does not participate in inheritance, if we try to do so then it will result in “ComplieTimeError”.
+
+Q9. Differentiate between abstraction and encapsulation.
+Answer. Abstraction is a design level process and it is used to reduce the complexity at the designing stage of a project. Encapsulation is an implementation level process, and it is used to provide privacy and maintain control over the transparency of data at the implementation stage of a project.
+
+Q10. Difference between runtime and compile time polymorphism explain with an example.
+Answer.  1.  The process of extending the existing method functionality into new functionality is called method overloading.
+      The process of replacing existing method functionality with new functionality is called Method Overriding. 
+  2. In the case of method overloading, different method signatures must be provided to the methods.
+      In the case of method overriding, the same method prototypes must be provided to the methods. 
+  3.  With or without inheritance we can perform method overloading.
+       With inheritance only we can perform Method overriding.
+Example
+class A{
+
+
+Public int add(int a, int b){
+return a+b;
+}
+
+public double add(int a, int b) // METHOD OVERLOADING(COMPILE TIME POLYMORPHISM)
+{
+Return a+b;
+}
+
+public void method(){
+System.out.println(“Method 1”);
+}
+
+
+}
+
+
+class B extends A{
+
+
+public void method(){
+System.out.println(“method 2”): // METHOD OVERRIDING(RUNTIME POLYMORPHISM)
+}
+
+}
+
+public class Launch{
+
+public static void main(String args[]){
+
+A obj = new A();
+B obj2 = new B();
+
+obj.add(5,4);
+obj.add(4.0,3.0);
+
+obj2.method();
+
+}
+}
+
+Output : 
+9
+7.0
+Method 2
