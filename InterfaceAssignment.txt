@@ -1,0 +1,62 @@
+Q1. What is an interface in java?
+Answer. Interface is a Java Feature, it will allow only abstract methods.
+*In Java applications, for interfaces, we are able to create only reference variables, we are unable to create objects.
+* In the case of interfaces, by default, all the variables are *public static final*.
+* In the case of interfaces, by default, all the methods are *public and abstract*.
+* In Java applications, constructors are possibe in classes and abstract classes but constructors are not possible in interfaces.
+* Interfaces will provide more shareability in Java applications when compared with classes and abstract classes.
+
+Q2. Which modifiers are allowed for methods in an interface? Explain with an example.
+Answer. Every method present inside the interface is always public and abstract whether we are declaring or not.
+Hence inside the interface the following method declarations are equal.
+void methodIne();
+public void methodOne();
+abstract void methodOne();
+public abstract void methodOne();
+
+Example:
+interface MyInterface{
+   public void demo();
+   public static void display() {
+      System.out.println("This is a static method");
+   }
+}
+public class InterfaceExample{
+   public void demo() {
+      System.out.println("This is the implementation of the demo method");
+   }
+   public static void main(String args[]) {
+      InterfaceExample obj = new InterfaceExample();
+      obj.demo();
+      MyInterface.display();
+   }
+}
+Output
+This is the implementation of the demo method
+This is a static method
+
+
+Q3. What is the use of interface in Java?Or, why do we use an interface in java?
+Answer. Interface in java is used when there is need of any service requirement specification(srs).
+Example: Sun people responsible to define JDBC API and databse vendor will provide implementation for that.
+
+Q4. What is the difference between abstract class and interface in Java?
+Answer. Interface: 
+* If we don't know anything about implementation just we have requirement specification then we should go for an interface.
+* Every method present inside the interface is always public and abstract whether we are declaring or not.
+* We can't declare interface methods with the modifiers private, protected, final, static, synchronized, native, strictfp.
+* Every interface variable is always a public static final whether we are declaring or not following modifiers. Private, protected,transient, volatile.
+* For the interface variables compulsory we should perform initialization at the time of declaration otherwise we will get compile time error.
+* Inside the interface we can't take static and instance blocks.
+* Inside the interface we can't take constructor.
+
+Abstract: 
+* If we are talking about implementation but not completely (partial implementation) then we should go for abstract class.
+* Every method present inside abstract class need not be public and abstract.
+* There are no restrictions on abstract class method modifiers.
+* Every abstract class variable need not be a public static final.
+* There are no restrictions on abstract class variable modifiers.
+* It is not required to perform initialization for abstract class variables at the time of declaration.
+* Inside abstract class we can take both static and instance blocks.
+* Inside the abstract class we can take constructor.
+

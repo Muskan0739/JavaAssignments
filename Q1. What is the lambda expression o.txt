@@ -1,0 +1,15 @@
+Q1. What is the lambda expression of java8?
+Answer. Lambda Expression is just an anonymous(nameless) function. That means the function which doesn’t have the name, return type and access modifiers.
+Lambda Expression also known as anonymous functions or closures.
+
+Q2. Can you pass lambda expressions to a method? When?
+Answer. 
+
+Q3. What is the functional interface in java8?
+Answer. If an interface contains only one abstract method, such types of interfaces are called functional interfaces and the method is called functional method or single abstract method(SAM).
+
+Q4. Why do we use lambda expressions in java?
+Answer. A lambda expression can implement a functional interface by defining an anonymous function that can be passed as an argument to some method.
+
+Q5. Is it mandatory for a lambda expression to have a parameters?
+Answer. No,
