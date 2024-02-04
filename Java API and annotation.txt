@@ -1,0 +1,120 @@
+Q1. Program to display current date and time in java.
+
+Ans. 
+Code:
+import java.time.*;
+
+public class file {
+    public static void main(String[] args) {
+       
+        LocalDate ld=LocalDate.now();
+        System.out.print("Current Date: ");
+        System.out.println(ld);
+
+        LocalTime lt=LocalTime.now();
+        System.out.print("Current Time: ");
+        System.out.println(lt);
+
+    }
+}
+
+Output: 
+Current Date: 2024-02-04
+Current Time: 15:15:00.317287300
+
+
+Q2. Write a program to convert a date to a string in the format “MM/dd/yyyy”.
+Ans. 
+Code:
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+
+public class file {
+    public static void main(String[] args) {
+       
+        LocalDate ld=LocalDate.now();
+        
+        DateTimeFormatter dtformat= DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        String formattedDate= ld.format(dtformat);
+        System.out.println("Formatted Date: " + formattedDate);
+
+    }
+}
+
+Output: Formatted Date: 02/04/2024
+
+
+Q3. What is the difference between collections and streams? Explain with an example.
+
+Ans. Collection: Collection is an in-memory data structure, which holds all the values that the data structure currently has. Every element in the Collection has to be computed before we add it to the Collection. Operations such as searching, sorting, insertion, manipulation, and deletion can be performed on a Collection. It provides many interfaces like (Set, List, Queue, Deque) and Classes like (ArrayList, Vector, LinkedList, PriorityQueue, HashSet). The data of collection can be used many times to perform any operations with them. 
+Example:
+import java.util.ArrayList;
+public class Collection {
+    public static void main(String[] args) {
+        ArrayList<Integer> l1= new ArrayList<Integer>();
+
+        l1.add(23);
+        l1.add(45);
+        l1.add(67);
+        l1.add(54);
+
+        for(Integer i: l1){
+            i=i*2;
+            System.out.println(i);
+        }
+
+    }
+}
+Output: 46
+90
+134
+108
+
+Stream: On the other hand, Stream is an API that is introduced in Java 8 which is used to process collections of objects. A stream is a sequence of objects that supports various methods which can be pipelined to prodA stream is not a data structure instead it takes input from the Collections, Arrays, or I/O channels to produce the desired result. The Stream API is used to process collections of objects. A stream of a collection can be used only once i.e. you can perform any operation on a stream only once.
+
+Example:
+import java.util.*;
+import java.util.stream.*;
+
+
+public class Stream_API {
+    public static void main(String[] args) {
+        List<Integer> list= Arrays.asList(2, 3, 4, 77);
+
+        Stream<Integer> listStream=list.stream(); //making a separate stream of data of collection ArrayList
+
+        listStream.forEach(i-> System.out.println(i*2));
+}
+}
+Output: 4
+6
+8
+154
+
+
+Q4. What is enum in java? Explain with an example.
+
+Ans. We can use enum to define a group of named constants. Enum concept introduced in 1.5 versions. When compared with old languages, enum java’s enum is more . By using enum we can define our own data types which also come with enumerated data types.
+
+Example: 
+Enum Color
+{
+ RED,BLUE,GREEN;
+}
+
+Class Test{
+ Public static void main(String argos[]){
+Color c=Color.RED;
+System.out.println(c);
+}
+}
+
+Output: RED
+
+Q5. What are inbuilt annotations in java?
+
+Ans. Java provides several built-in annotations that can be used to provide additional information about code elements. Here are some of the most commonly used built-in annotations in java.
+@Override: This annotation is used to indicate that a method in a subclass is intended to override a method in the superclass.
+@Deprecated: This annotation is used to mark a program elements deprecated, indicating that it is n longer recommended for use and may be removed in future versions of the code.
+@SuppressWarnings: This annotation is used to suppress warnings issued by the compiler.
+
