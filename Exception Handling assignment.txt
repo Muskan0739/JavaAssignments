@@ -1,0 +1,93 @@
+Q1. Explain different types of errors in java.
+Ans. In a programming language we categories errors into 2 types
+Syntax Error/CompileTime Mistakes
+Logical Error/RunTime Mistakes
+
+Syntax Error: It refers to the mistakes done by the programmer with respect to syntax.  These mistakes are identified by the compiler, so we say it as “CompileTimeMistakes”.
+
+Logical Error: It refers to the mistakes done by the programmer in terms of writing a logic. These mistakes are identified by jvm during the execution of a program, so we say it as  “RunTimeMistakes”.
+
+
+Q2. What is an exception in java.
+Ans. An unwanted/expected event that disturbs the normal flow of execution of a program is called “Exception handling”/
+The main objective if Exception handling is to handle the exception.
+It is available for graceful termination of a program.
+
+Q3. How can you handle exceptions in Java? Explain with an example.
+Ans. Java provides two different options to handle an exception. You can either use the try-catch-finally approach to handle all kinds of exceptions. Or you can use the try-with-resource approach which allows an easier cleanup process for resources.
+
+Try-Catch
+That is the classical approach to handle an exception in Java. It can consist of 3 steps:
+
+a try block that encloses the code section which might throw an exception,
+one or more catch blocks that handle the exception and
+a finally block which gets executed after the try block was successfully executed or a thrown exception was handled.
+
+Example:
+Public class Test{
+Public void main(String args[]){
+
+Int a=2;
+Int b=0;
+Int result;
+
+Try{
+result=a/b;
+System.out.println(result);
+}
+catch(Exception e){
+System.out.println(“Some error occurred”);
+}
+}
+}
+
+Try-with-Resources
+
+That changed when Java 7 introduced the try-with-resource statement. It automatically closes all resources that implement the AutoCloseable interface. And that is the case for most Java objects that you need to close.
+
+Example:
+Import java.util.Scanner;
+Public class Test{
+Public static void main(String args[]){
+Int num=0;
+
+//try with resources
+
+try(scanner sc=new Scanner(System.in)){
+num=sc.nextInt();
+}
+System.out.println(num);
+}
+}
+
+Q4. Why do we need exception handling in java?
+Ans. I can check for the input and if it's an invalid input from the user, I can use a simple "if condition" which prints "input invalid, please re-enter" (in case there is an invalid input).
+
+This approach of "if there is a potential for a failure, verify it using an if condition and then specify the right behavior when failure is encountered..." seems enough for me.
+
+If I can basically cover any kind of failure (divide by zero, etc.) with this approach, why do I need this whole exception handling mechanism (exception class and objects, checked and unchecked, etc.)?
+
+Q5. What is the difference between exception and error in java?
+Ans. Exception: The term exception is shorthand for the phrase exception event. It is an event that occurs during the execution of the program and interrupts the normal flow of program instructions. These are the errors that occur at compile time and run time. It occurs in the code written by the developers. It can be recovered by using the try-catch block and throws keyword. There are two types of exceptions i.e. checked and unchecked.
+
+Error: Error are problems that mainly occur due to the lack of system resources. It cannot be caught or handled. It indicates a serious problem. It occurs at run time. These are always unchecked. An example of errors is OutOfMemoryError, LinkageError, AssertionError, etc. are the subclasses of the Error class.
+
+Q6. Name the different types of exceptions in java.
+Ans. Below is the list of important built in exceptions in java.
+ArithmeticException
+ArrayIndexOutOfBoundsException: 
+ClassNotFoundException
+FileNotFoundException
+IOException
+InterruptedException
+NoSuchFieldException
+NoSuchMethodException
+NullPointerException
+NumberFormatException
+RuntimeException
+StringIndexOutOfBoundsException
+
+Q7. Can we just use try instead of finally and catch blocks?
+Ans.  Yes, we can use try block instead of catch block. But if the throws a checked exception, it has to appear in the throws clause of the method signature. If an unchecked exception is thrown, it's bubbled out of the method.
+
+The finally block is always executed, whether an exception is thrown or not.
