@@ -1,0 +1,35 @@
+1. What is the collection framework in java?
+Ans.  In Order to represent a group of individual object as a single entity then we need to go for Collection.   Group of classes and interface, which can be used to represent a group of individual object as a single entity,
+then we need to go for "CollectionFramework".  All the commonly used method required for all the collections are a part of Collection(I).
+
+2. What is the difference between ArrayList and LinkedList?
+Ans. ArrayList- ArrayList is a part of the collection framework. It is present in the java.util package and provides us dynamic arrays in Java. Though, it may be slower than standard arrays but can be helpful in programs where lots of manipulation in the array is needed. We can dynamically add and remove items. It automatically resizes itself.
+
+LinkedList- LinkedList is a linear data structure where the elements are not stored in contiguous locations and every element is a separate object with a data part and address part. The elements are linked using pointers and addresses. Each element is known as a node. Due to the dynamicity and ease of insertions and deletions, they are preferred over the arrays.
+
+3. What is the difference between Iterator and ListIterator?
+Ans. Iterator- Iterators are used in Collection framework in Java to retrieve elements one by one. It can be applied to any Collection object. By using Iterator, we can perform both read and remove operations. Iterator must be used whenever we want to enumerate elements in all Collection framework implemented interfaces like Set, List, Queue, Deque and also in all implemented classes of Map interface.
+
+ListIterator- ListIterator It is only applicable for List collection implemented classes like arraylist, linkedlist etc. It provides bi-directional iteration. ListIterator must be used when we want to enumerate elements of List. This cursor has more functionality(methods) than iterator. ListIterator object can be created by calling listIterator() method present in List interface.
+
+5. What is the difference between List and Set?
+Ans. List- The List interface allows storing the ordered collection. It is a child interface of Collection. It is an ordered collection of objects in which duplicate values are allowed to store. List preserves the insertion order, it allows positional access and insertion of elements.
+
+
+Set- The set interface in the java.util package and extends Collection interface is an unordered collection of objects in which duplicate values cannot be stored. It is an interface that implements the maths set. This interface contains the methods inherited from the Collection interface and adds a feature that restricts to insert the duplicate elements. 
+
+6. What is the difference between HashSet and Treeset?
+Ans. HashSet- HashSet is a generic class of the Java collection framework. It extends AbstractSet and implements the Set interface. It creates a collection that uses a hash table for storage. The hash table stores the information by using the hashing mechanism. Hashing uses the informational content to determine a unique value which is known as hash code. It is used as the index in which data is stored that is associated with the key.
+
+TreeSet- TreeSet is a class of Java collection framework that extends AbstractSet and implements the Set, NavigableSet, and SortedSet interface. It creates a collection that uses a tree for storage. TreeSet is a generic class of the Java collection framework. It implements the Set interface. It uses TreeMap internally to store the TreeSet elements.
+
+7. What is the difference between Array and ArrayList?
+Ans. Array- An array is a dynamically-created object. It serves as a container that holds the constant number of values of the same type. It has a contiguous memory location. Once an array is created, we cannot change its size.
+We can create an array by using the following statement:
+
+int array[]=new int[size];  
+
+ArrayList- In Java, ArrayList is a class of Collections framework. It implements List<E>, Collection<E>, Iterable<E>, Cloneable, Serializable, and RandomAccess interfaces. It extends AbstractList<E> class. ArrayList is internally backed by the array in Java. The resize operation in ArrayList slows down the performance as it involves new array and copying content from an old array to a new array. 
+We can create an instance of ArrayList by using the following statement:
+
+ArrayList<Type> arrayList=new ArrayList<Type>();  
