@@ -1,0 +1,52 @@
+1. What is a Map in java?
+Ans. To represent a group of individual objects as a key value pair then we need to opt for Map. It is not a child interface of colletion. If we want to represent a group of objects as a key-valuepair then we need to go for map. 
+
+2. What are the commonly used implementation of map in java?
+Ans. The three general-purpose Map implementations are HashMap, TreeMap and LinkedHashMap. If you need SortedMap operations or key-ordered Collection-view iteration, use TreeMap; if you want maximum speed and don't care about iteration order, use HashMap; if you want near-HashMap performance and insertion-order iteration, use LinkedHashMap. In this respect, the situation for Map is analogous to Set. Likewise, everything else in the Set Implementations section also applies to Map implementations.
+
+3. What is the difference between HashMap and TreeMap?
+Ans. HashMap- HashMap implements Map<K, V>, Cloneable and Serializable interface. It extends AbstractMap<K, V> class. It belongs to java.util package.
+
+HashMap contains value based on the key.
+It may have a single null key and multiple null values.
+HashMap does not maintain order while iterating.
+It contains unique elements.
+It works on the principle of hashing.
+
+TreeMap- TreeMap class extends AbstractMap<K, V> class and implements NavigableMap<K, V >, Cloneable, and Serializable interface. TreeMap is an example of a SortedMap. It is implemented by the Red-Black tree, which means that the order of the keys is sorted.
+
+TreeMap also contains value based on the key.
+TreeMap is sorted by keys.
+It contains unique elements.
+It cannot have a null key but have multiple null values.
+Keys are in ascending order.
+It stores the object in the tree structure.
+
+4. How do you check if a key exists in a map in java?
+Ans. The containsKey() method returns true if this map contains a mapping for the specified key. 
+
+5. What are Generics in java?
+Ans. Generics means parameterized types. The idea is to allow type (Integer, String, … etc., and user-defined types) to be a parameter to methods, classes, and interfaces. Using Generics, it is possible to create classes that work with different data types. An entity such as class, interface, or method that operates on a parameterized type is a generic entity.
+
+6. What are the benefits of using generics in java?
+Ans. Type safety:
+One of the most significant benefits of using generics in Java is that it enhances the type safety of your code. With generics, you can specify the type of data that a class, method, or interface can work with.
+
+Code reuse:
+Generics in Java allow you to write code that is more reusable. By specifying a type parameter in a generic class, method, or interface, you can create code that can work with multiple data types.
+
+Compile-time checking:
+Another significant advantage of using generics in Java is that it enables compile-time checking of your code. This means that errors can be detected early in the development process, rather than at runtime.
+
+7. What is a Generic class in java?
+Ans. A Generic class simply means that the items or functions in that class can be generalized with the parameter(example T) to specify that we can add any type as a parameter in place of T like Integer, Character, String, Double or any other user-defined type.
+
+8. What is a Type parameter in java generics?
+Ans. 
+By convention, type parameter names are single, uppercase letters. This stands in sharp contrast to the variable naming conventions that you already know about, and with good reason: Without this convention, it would be difficult to tell the difference between a type variable and an ordinary class or interface name.
+
+9. What is a generic method in java?
+Ans. Generic methods are methods that introduce their own type parameters. This is similar to declaring a generic type, but the type parameter's scope is limited to the method where it is declared. Static and non-static generic methods are allowed, as well as generic class constructors.
+
+10. What is difference between ArrayList and ArrayList<T>?
+Ans. ArrayList is a non-generic class, while ArrayList<T> is a generic class. ArrayList<T> provides type safety, as it can only store elements of the specified type, whereas ArrayList can store any type of element.
