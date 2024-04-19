@@ -1,0 +1,45 @@
+1. What is input and Output Stream in Java?
+Ans. Input Stream: InputStream is an abstract class of Byte Stream that describe stream input and it is used for reading and it could be a file, image, audio, video, webpage, etc. it doesn’t matter. Thus, InputStream read data from source one item at a time.
+
+Output Stream:  OutputStream is an abstract class of Byte Stream that describes stream output and it is used for writing data to a file, image, audio, etc. Thus, OutputStream writes data to the destination one at a time.
+
+2. What are the methods of OutputStream?
+ANs. write() - writes the specified byte to the output stream.
+write(byte[] array) - writes the bytes from the specified array to the output stream.
+flush() - forces to write all data present in the output stream to the destination.
+close() - closes the output stream.
+
+3. What is serialization in Java?
+Ans. Serialization is a mechanism of converting the state of an object into a byte stream. . This mechanism is used to persist the object. The byte stream created is platform independent. So, the object serialized on one platform can be deserialized on a different platform. To make a Java object serializable we implement the java.io.Serializable interface. The ObjectOutputStream class contains writeObject() method for serializing an Object. 
+
+4. What is the serializable interface in java?
+Ans. The Serializable interface is present in java.io package. It is a marker interface. A Marker Interface does not have any methods and fields. Thus classes implementing it do not have to implement any methods.
+
+5. What is deserialization in java?
+Ans.  Deserialization is the process where the byte stream is used to recreate the actual Java object in memory. 
+
+6. How is serialization achieved in java?
+Ans.  To make a Java object serializable we implement the java.io.Serializable interface. The ObjectOutputStream class contains writeObject() method for serializing an Object. 
+
+7. How is derserialization achieved in java?
+Ans. To reverse the process of Serialization, Java uses the `ObjectInputStream` class. Its `readObject()` method reads the byte stream from a source (usually a file) and converts it back into the corresponding object.
+
+8. How can you avoid certain member varialbles of class from getting serialized?
+Ans. To avoid certain member variabls of class from getting serialized you have to declare those variables as transient then it will not be persisted.
+
+9. What classes are available in the Java IO file classes API?
+Ans. File
+RandomAccessFile
+FileInputStream
+FileReader
+FileMutputStream
+FileWriter
+
+10. What is the difference between Externalizable and Serialization inerface?
+Ans. Serialble- Serializable is a marker interface i.e. does not contain any method. 
+Serializable interface passes the responsibility of serialization to JVM and its default algorithm.
+Mostly, default serialization is easy to implement, but has a higher performance cost.
+
+Externalizable- Externalizable interface includes two methods writeExternal() and readExternal() which implementing classes MUST override.
+Externalizable provides control of serialization logic to the programmer – to write custom logic.
+Serialization done using Externalizable, add more responsibility to the programmer but often results in better performance.
