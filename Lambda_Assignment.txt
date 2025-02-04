@@ -1,0 +1,14 @@
+Q1. What is the lambda expression of Java 8?
+Answer. Lambda expressions in Java 8 are concise ways to represent anonymous functions, allowing you to define method implementations directly inline. They consist of three parts: a parameter list, an arrow (->), and a body that can be a single expression or a block of code. Lambda expressions are typically used to implement functional interfaces, which are interfaces with a single abstract method.
+
+Q2. Can you pass lambda expressions to a method? When?
+Answer. Yes, you can pass lambda expressions to a method in Java. This is typically done when the method parameter is of a functional interface type. A functional interface is an interface that has only one abstract method. Lambda expressions are used to implement the single abstract method of these interfaces.
+
+Q3. What is the functional interface in Java 8?
+Answer. In Java 8, a functional interface is an interface that contains exactly one abstract method. These interfaces are designed to work with lambda expressions and method references, allowing for more concise and readable code. The @FunctionalInterface annotation can be used to explicitly declare an interface as a functional interface, although it is not mandatory. Examples of built-in functional interfaces in Java 8 include Function, Predicate, and UnaryOperator. The UnaryOperator interface, for instance, represents an operation on a single operand that produces a result of the same type as its operand.
+
+Q4. Why do we use lambda expressions in Java+
+Asnwer. Lambda expressions in Java are used for several reasons, primarily to make the code more concise, readable, and functional. They allow for the implementation of functional interfaces, which are interfaces with a single abstract method, by defining anonymous functions that can be passed as arguments to methods. This feature enables functional programming in Java, allowing developers to treat code as data and pass executable code as objects.
+
+Q5. Is it mandatory for a lambda expression to have parameters?
+Answer. A lambda expression in Java is not mandatory to have parameters. It can have no parameters, a single parameter, or multiple parameters.
