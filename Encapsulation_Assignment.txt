@@ -1,0 +1,101 @@
+Q1. What is Encapsulation in Java? Why is it called Data hiding?
+Answer. Encapsulation is one of the core principles of Object-Oriented Programming (OOP) in Java. It refers to the bundling of data (variables) and methods (functions) that operate on the data into a single unit, usually a class. This helps in restricting direct access to some of an object's components and only allowing controlled access through well-defined methods.
+Encapsulation is often referred to as data hiding because:
+
+1. Direct access to data is restricted – The instance variables are declared private, so they cannot be accessed directly from outside the class.
+2. Only controlled access is allowed – The values of private variables can only be modified through setter methods, ensuring validation before assignment.
+3. It prevents unintended modifications – Since external classes cannot directly modify the data, it prevents accidental changes or corruption of the object’s state.
+
+Q2. What are the important features of Encapsulation?
+Answer. Important features of encapsulation:
+
+1. Data Hiding: Encapsulation hides the internal state of an object from direct access, ensuring that data can only be accessed through methods defined within the class.
+2. Access Control: Access to the object's data is controlled through methods known as getters and setters. Getters retrieve the values of private variables, while setters update these values.
+3. Private Variables: Variables within a class are often declared as private to restrict direct access from outside the class.
+
+Q3. What are getter and setter methods in Java Explain with an example?
+Answer. Getter and setter methods in Java are used to retrieve and modify the values of private fields within a class, respectively. They help in encapsulating the data and controlling how the data is accessed and modified, which is a key principle of object-oriented programming.
+
+Example:
+Consider a Student class with a private field name:
+
+public class Student {
+    private String name;
+
+    // Getter method
+    public String getName() {
+        return name;
+    }
+
+    // Setter method
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+Q4. What is the use of this keyword explain with an example.
+Answer. The this keyword in Java is used to refer to the current object within a class. It is particularly useful in resolving naming conflicts between instance variables and method parameters, and in constructor chaining. 
+
+Example: public class Book {
+    String title;
+
+    Book(String title) {
+        this.title = title; // Clarifies which 'title' is which
+    }
+
+    void display() {
+        System.out.println("Book Title: " + this.title);
+    }
+
+    public static void main(String[] args) {
+        Book book = new Book("Java Programming");
+        book.display();
+    }
+}
+
+Q5. What is the advantage of Encapsulation?
+Answer. Encapsulation is a fundamental principle in object-oriented programming that offers several advantages:
+
+1. Data Security: Encapsulation helps protect an object's internal state from unintended alterations or misuse by restricting direct access to its data.
+2. Ease of Maintenance: Changes to a class's internal implementation can be made without altering any external code that uses the class.
+3. Control of Input and Output: By using getter and setter methods, you have control over what is inputted into an object and what is outputted, allowing you to validate data before it is set.
+4. Reduced Complexity: Information hiding achieved by encapsulation decreases program complexity by limiting interactions with other components.
+5. Flexibility and Reusability: Encapsulation allows for more flexible and reusable code, as behaviors are encapsulated within objects, making them easier to modify and reuse in different contexts.
+
+Q6. How to achieve encapsulation in Java? Give an example.
+Asnwer. To achieve encapsulation in Java, you declare all member variables as private and provide public getter and setter methods to access and modify these variables. This ensures that the internal state of the object is protected and can be controlled. Here is an example:
+
+public class Person {
+    // Private variables
+    private String name;
+    private int age;
+
+    // Getter method for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter method for age
+    public int getAge() {
+        return age;
+    }
+
+    // Setter method for age
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+// In the main method
+public static void main(String[] args) {
+    Person person = new Person();
+    person.setName("John");
+    person.setAge(30);
+    System.out.println("Name: " + person.getName());
+    System.out.println("Age: " + person.getAge());
+}
